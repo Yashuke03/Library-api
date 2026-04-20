@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const JWT_SECRET = process.env.JWT_SECRET || 'library_dashboard_secret';
 
 const auth = async (req, res, next) => {
   try {
@@ -9,7 +10,7 @@ const auth = async (req, res, next) => {
     }
 
     const token = header.split(' ')[1];
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, JWT_SECRET);
     req.user = { id: decoded.id, email: decoded.email };
 
     return next();

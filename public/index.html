@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="toast"></div>
+
+  <main class="auth-shell" id="authShell">
+    <section class="auth-card">
+      <h1>Library Manager</h1>
+      <p class="muted">Sign in or create your account</p>
+
+      <div class="auth-tabs">
+        <button class="tab-btn active" data-auth-tab="login">Login</button>
+        <button class="tab-btn" data-auth-tab="register">Register</button>
+      </div>
+
+      <form id="loginForm" class="auth-form active">
+        <label>Email</label>
+        <input type="email" id="loginEmail" placeholder="you@example.com" required />
+        <label>Password</label>
+        <input type="password" id="loginPassword" placeholder="••••••••" required />
+        <button type="submit" class="primary">Login</button>
+      </form>
+
+      <form id="registerForm" class="auth-form">
+        <label>Name</label>
+        <input type="text" id="registerName" placeholder="John Doe" required />
+        <label>Email</label>
+        <input type="email" id="registerEmail" placeholder="you@example.com" required />
+        <label>Password</label>
+        <input type="password" id="registerPassword" placeholder="••••••••" required />
+        <button type="submit" class="primary">Create Account</button>
+      </form>
+    </section>
+  </main>
+
+  <main class="dashboard hidden" id="dashboard">
+    <aside class="sidebar">
+      <h2>Library UI</h2>
+      <button class="nav-btn active" data-panel="booksPanel">Manage Books</button>
+      <button class="nav-btn" data-panel="filesPanel">Manage Files</button>
+      <button class="danger" id="logoutBtn">Logout</button>
+    </aside>
+
+    <section class="content">
+      <header class="content-header">
+        <div>
+          <h3 id="welcomeTitle">Dashboard</h3>
+          <p class="muted">Manage books and files with integrated API</p>
+        </div>
+      </header>
+
+      <section id="booksPanel" class="panel active">
+        <div class="grid two">
+          <article class="card">
+            <h4>Add Book</h4>
+            <form id="bookForm">
+              <input type="text" id="bookTitle" placeholder="Title" required />
+              <input type="text" id="bookAuthor" placeholder="Author" required />
+              <input type="text" id="bookGenre" placeholder="Genre" required />
+              <input type="number" id="bookYear" placeholder="Year" required />
+              <button type="submit" class="primary">Add Book</button>
+            </form>
+          </article>
+
+          <article class="card">
+            <h4>Filters</h4>
+            <form id="filterForm">
+              <input type="text" id="filterAuthor" placeholder="Filter by author" />
+              <input type="text" id="filterGenre" placeholder="Filter by genre" />
+              <div class="row">
+                <button type="submit" class="primary">Apply</button>
+                <button type="button" class="secondary" id="clearFilters">Clear</button>
+              </div>
+            </form>
+          </article>
+        </div>
+
+        <article class="card">
+          <h4>Books</h4>
+          <div id="booksGrid" class="books-grid"></div>
+          <div id="pagination" class="pagination"></div>
+        </article>
+      </section>
+
+      <section id="filesPanel" class="panel">
+        <article class="card">
+          <h4>Upload File</h4>
+          <form id="uploadForm" class="row wrap">
+            <input type="file" id="fileInput" required />
+            <button type="submit" class="primary">Upload</button>
+          </form>
+        </article>
+
+        <article class="card">
+          <h4>My Files</h4>
+          <div id="filesList" class="files-list"></div>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -199,3 +199,22 @@ Example JSON body:
 - Global error handling middleware is included.
 - File metadata is stored in MySQL, while files are stored physically in the `uploads` folder.
 - JWT authentication protects sensitive operations.
+
+## 8) Troubleshooting
+
+### Error: `Cannot find module 'express'`
+This means project packages are not installed yet.
+
+Run:
+```bash
+npm install
+```
+
+Then start again:
+```bash
+npm run dev
+```
+or
+```bash
+npm start
+```
