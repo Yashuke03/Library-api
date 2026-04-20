@@ -48,7 +48,6 @@ Library-api/
 ```bash
 npm install
 ```
-> Important: If you skip this step and run `node server.js`, you will get errors like `Cannot find module 'express'`.
 
 ### Step 3: Create database tables
 Run this SQL file in MySQL:
