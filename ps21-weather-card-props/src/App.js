@@ -1,0 +1,1 @@
+import React from "react";import WeatherCard from "./components/WeatherCard";import "./App.css";export default function App(){const data=[{city:"Delhi",temp:35,condition:"Sunny"},{city:"Mumbai",temp:28,condition:"Rainy"},{city:"Bangalore",temp:24,condition:"Cloudy"}];return <div className="container"><h1>Weather Cards</h1>{data.map(d=><WeatherCard key={d.city} {...d}/> )}</div>}

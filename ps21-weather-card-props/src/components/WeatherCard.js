@@ -1,0 +1,1 @@
+import React from "react";export default function WeatherCard({city,temp,condition}){const bg=condition==="Sunny"?"#ffe08a":condition==="Rainy"?"#b3d9ff":"#ddd";return <div className="card" style={{background:bg}}><h3>{city}</h3><p>{temp}°C</p><p>{condition}</p></div>}
