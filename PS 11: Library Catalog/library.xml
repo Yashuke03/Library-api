@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="library.xsd">
+
+  <book>
+    <bookId>101</bookId>
+    <title>Clean Code</title>
+    <author>Robert C. Martin</author>
+    <genre>Programming</genre>
+    <publishedYear>2008</publishedYear>
+    <price>499.99</price>
+  </book>
+
+  <book>
+    <bookId>102</bookId>
+    <title>The Pragmatic Programmer</title>
+    <author>Andrew Hunt</author>
+    <genre>Programming</genre>
+    <publishedYear>1999</publishedYear>
+    <price>599.50</price>
+  </book>
+
+  <book>
+    <bookId>103</bookId>
+    <title>Atomic Habits</title>
+    <author>James Clear</author>
+    <genre>Self-help</genre>
+    <publishedYear>2018</publishedYear>
+    <price>399.00</price>
+  </book>
+
+  <book>
+    <bookId>104</bookId>
+    <title>Rich Dad Poor Dad</title>
+    <author>Robert Kiyosaki</author>
+    <genre>Finance</genre>
+    <publishedYear>1997</publishedYear>
+    <price>350.75</price>
+  </book>
+
+  <book>
+    <bookId>105</bookId>
+    <title>Think and Grow Rich</title>
+    <author>Napoleon Hill</author>
+    <genre>Motivation</genre>
+    <publishedYear>1937</publishedYear>
+    <price>299.99</price>
+  </book>
+
+</library>

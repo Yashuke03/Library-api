@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="results.xsd">
+
+  <student>
+    <rollNo>1</rollNo>
+    <name>Yash Uke</name>
+    <subject>DBMS</subject>
+    <marksObtained>85</marksObtained>
+    <grade>A</grade>
+  </student>
+
+  <student>
+    <rollNo>2</rollNo>
+    <name>Amit Sharma</name>
+    <subject>OS</subject>
+    <marksObtained>72</marksObtained>
+    <grade>B</grade>
+  </student>
+
+  <student>
+    <rollNo>3</rollNo>
+    <name>Priya Verma</name>
+    <subject>CN</subject>
+    <marksObtained>65</marksObtained>
+    <grade>C</grade>
+  </student>
+
+  <student>
+    <rollNo>4</rollNo>
+    <name>Rahul Patel</name>
+    <subject>SE</subject>
+    <marksObtained>40</marksObtained>
+    <grade>D</grade>
+  </student>
+
+  <student>
+    <rollNo>5</rollNo>
+    <name>Sneha Joshi</name>
+    <subject>DBMS</subject>
+    <marksObtained>30</marksObtained>
+    <grade>F</grade>
+  </student>
+
+</results>

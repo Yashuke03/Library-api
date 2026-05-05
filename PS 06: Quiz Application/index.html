@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .quiz-container {
+      background: white;
+      padding: 20px;
+      width: 350px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    .option {
+      margin: 8px 0;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="quiz-container">
+  <h2 id="question">Question</h2>
+
+  <div id="options"></div>
+
+  <button onclick="nextQuestion()">Next</button>
+</div>
+
+<script>
+  const quizData = [
+    {
+      question: "What does HTML stand for?",
+      options: ["Hyper Trainer Marking Language", "Hyper Text Markup Language", "Hyper Text Marketing Language", "Hyper Tool Multi Language"],
+      answer: 1
+    },
+    {
+      question: "Which language is used for styling?",
+      options: ["HTML", "CSS", "Java", "Python"],
+      answer: 1
+    },
+    {
+      question: "Which is a JavaScript framework?",
+      options: ["React", "Laravel", "Django", "Flask"],
+      answer: 0
+    },
+    {
+      question: "Which tag is used for images?",
+      options: ["<img>", "<image>", "<pic>", "<src>"],
+      answer: 0
+    },
+    {
+      question: "Which company developed React?",
+      options: ["Google", "Microsoft", "Facebook", "Amazon"],
+      answer: 2
+    }
+  ];
+
+  let currentQuestion = 0;
+  let score = 0;
+
+  function loadQuestion() {
+    const q = quizData[currentQuestion];
+    document.getElementById("question").textContent = q.question;
+
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+
+    q.options.forEach((opt, index) => {
+      const option = document.createElement("div");
+      option.classList.add("option");
+
+      option.innerHTML = `
+        <label>
+          <input type="radio" name="answer" value="${index}">
+          ${opt}
+        </label>
+      `;
+
+      optionsDiv.appendChild(option);
+    });
+  }
+
+  function nextQuestion() {
+    const selected = document.querySelector('input[name="answer"]:checked');
+
+    if (selected) {
+      if (parseInt(selected.value) === quizData[currentQuestion].answer) {
+        score++;
+      }
+    }
+
+    currentQuestion++;
+
+    if (currentQuestion < quizData.length) {
+      loadQuestion();
+    } else {
+      document.querySelector(".quiz-container").innerHTML = `
+        <h2>Your Score: ${score}/${quizData.length}</h2>
+        <p>${score >= 3 ? "Good Job!" : "Keep Practicing!"}</p>
+      `;
+    }
+  }
+
+  loadQuestion();
+</script>
+
+</body>
+</html>

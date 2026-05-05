@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="flights">
+    <xsd:complexType>
+      <xsd:sequence>
+
+        <xsd:element name="flight" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+
+              <xsd:element name="flightNumber" type="xsd:string"/>
+              <xsd:element name="airline" type="xsd:string"/>
+              <xsd:element name="source" type="xsd:string"/>
+              <xsd:element name="destination" type="xsd:string"/>
+
+              <!-- Time format HH:MM -->
+              <xsd:element name="departureTime">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                    <xsd:pattern value="([01][0-9]|2[0-3]):[0-5][0-9]"/>
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+
+              <xsd:element name="arrivalTime">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                    <xsd:pattern value="([01][0-9]|2[0-3]):[0-5][0-9]"/>
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+
+              <!-- Seats must be positive -->
+              <xsd:element name="seats">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:integer">
+                    <xsd:minInclusive value="1"/>
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+
+              <!-- Status restriction -->
+              <xsd:element name="status">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="On-Time"/>
+                    <xsd:enumeration value="Delayed"/>
+                    <xsd:enumeration value="Cancelled"/>
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

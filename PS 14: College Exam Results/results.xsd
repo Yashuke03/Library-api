@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="results">
+    <xsd:complexType>
+      <xsd:sequence>
+
+        <xsd:element name="student" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+
+              <xsd:element name="rollNo" type="xsd:integer"/>
+
+              <xsd:element name="name" type="xsd:string"/>
+
+              <!-- Subject restriction -->
+              <xsd:element name="subject">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="DBMS"/>
+                    <xsd:enumeration value="OS"/>
+                    <xsd:enumeration value="CN"/>
+                    <xsd:enumeration value="SE"/>
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+
+              <!-- Marks (0–100) -->
+              <xsd:element name="marksObtained">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:integer">
+                    <xsd:minInclusive value="0"/>
+                    <xsd:maxInclusive value="100"/>
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+
+              <!-- Grade restriction -->
+              <xsd:element name="grade">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="A"/>
+                    <xsd:enumeration value="B"/>
+                    <xsd:enumeration value="C"/>
+                    <xsd:enumeration value="D"/>
+                    <xsd:enumeration value="F"/>
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Student Registration</h2>
+
+    <form>
+
+      <!-- Name -->
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" required minlength="3" placeholder="Enter your name">
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" required placeholder="Enter your email">
+      </div>
+
+      <!-- Phone -->
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="tel" pattern="[0-9]{10}" required placeholder="10 digit number">
+      </div>
+
+      <!-- DOB -->
+      <div class="form-group">
+        <label>Date of Birth</label>
+        <input type="date" required>
+      </div>
+
+      <!-- Course -->
+      <div class="form-group">
+        <label>Course</label>
+        <select required>
+          <option value="">Select Course</option>
+          <option>CSE</option>
+          <option>IT</option>
+          <option>ENTC</option>
+          <option>MECH</option>
+        </select>
+      </div>
+
+      <!-- Gender -->
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="inline">
+          <label><input type="radio" name="gender" required> Male</label>
+          <label><input type="radio" name="gender"> Female</label>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="form-group">
+        <label>Skills</label>
+        <div class="inline">
+          <label><input type="checkbox"> HTML</label>
+          <label><input type="checkbox"> CSS</label>
+          <label><input type="checkbox"> JavaScript</label>
+          <label><input type="checkbox"> React</label>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit">Register</button>
+
+    </form>
+  </div>
+
+</body>
+</html>

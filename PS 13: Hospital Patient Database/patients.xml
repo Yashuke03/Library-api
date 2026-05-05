@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<patients xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="patients.xsd">
+
+  <patient>
+    <patientId>101</patientId>
+    <name>Rahul Sharma</name>
+    <age>25</age>
+    <bloodGroup>A+</bloodGroup>
+    <admissionDate>2026-05-01</admissionDate>
+    <doctorAssigned>Dr. Mehta</doctorAssigned>
+  </patient>
+
+  <patient>
+    <patientId>102</patientId>
+    <name>Priya Verma</name>
+    <age>32</age>
+    <bloodGroup>O-</bloodGroup>
+    <admissionDate>2026-05-03</admissionDate>
+    <doctorAssigned>Dr. Singh</doctorAssigned>
+  </patient>
+
+  <patient>
+    <patientId>103</patientId>
+    <name>Amit Patel</name>
+    <age>40</age>
+    <bloodGroup>B+</bloodGroup>
+    <admissionDate>2026-05-04</admissionDate>
+    <doctorAssigned>Dr. Shah</doctorAssigned>
+  </patient>
+
+  <patient>
+    <patientId>104</patientId>
+    <name>Sneha Joshi</name>
+    <age>29</age>
+    <bloodGroup>AB-</bloodGroup>
+    <admissionDate>2026-05-05</admissionDate>
+    <doctorAssigned>Dr. Kulkarni</doctorAssigned>
+  </patient>
+
+</patients>
