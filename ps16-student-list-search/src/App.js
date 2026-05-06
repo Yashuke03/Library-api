@@ -18,8 +18,8 @@ export default function App() {
   return (
     <div className="container">
       <h1>Student List with Search</h1>
-      <input value={query} onChange={(e)=>setQuery(e.target.value)} placeholder="Search by name, roll, branch" />
-      <div className="grid">{filtered.map((s)=><StudentCard key={s.roll} student={s} />)}</div>
+      <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search by name, roll, branch" />
+      <div className="grid">{filtered.map((s) => <StudentCard key={s.roll} student={s} />)}</div>
     </div>
   );
 }

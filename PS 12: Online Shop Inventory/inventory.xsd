@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="inventory">
+    <xsd:complexType>
+      <xsd:sequence>
+
+        <xsd:element name="product" maxOccurs="unbounded" minOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+
+              <!-- Product ID -->
+              <xsd:element name="productId" type="xsd:integer"/>
+
+              <!-- Name -->
+              <xsd:element name="name" type="xsd:string"/>
+
+              <!-- Category restriction -->
+              <xsd:element name="category">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="Electronics"/>
+                    <xsd:enumeration value="Clothing"/>
+                    <xsd:enumeration value="Food"/>
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+
+              <!-- Stock must be >= 0 -->
+              <xsd:element name="stock">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:integer">
+                    <xsd:minInclusive value="0"/>
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+
+              <!-- Price -->
+              <xsd:element name="price" type="xsd:decimal"/>
+
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

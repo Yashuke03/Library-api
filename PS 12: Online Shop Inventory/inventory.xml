@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<inventory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="inventory.xsd">
+
+  <product>
+    <productId>1</productId>
+    <name>Laptop</name>
+    <category>Electronics</category>
+    <stock>10</stock>
+    <price>55000.50</price>
+  </product>
+
+  <product>
+    <productId>2</productId>
+    <name>T-Shirt</name>
+    <category>Clothing</category>
+    <stock>25</stock>
+    <price>799.99</price>
+  </product>
+
+  <product>
+    <productId>3</productId>
+    <name>Chocolate</name>
+    <category>Food</category>
+    <stock>50</stock>
+    <price>150.00</price>
+  </product>
+
+  <product>
+    <productId>4</productId>
+    <name>Headphones</name>
+    <category>Electronics</category>
+    <stock>15</stock>
+    <price>1999.99</price>
+  </product>
+
+  <product>
+    <productId>5</productId>
+    <name>Jeans</name>
+    <category>Clothing</category>
+    <stock>20</stock>
+    <price>1499.50</price>
+  </product>
+
+</inventory>

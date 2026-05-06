@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .card h2 {
+      margin: 10px 0 5px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .skills {
+      margin: 15px 0;
+      text-align: left;
+    }
+
+    .skill {
+      margin-bottom: 8px;
+    }
+
+    .skill-name {
+      font-size: 13px;
+    }
+
+    .progress {
+      height: 8px;
+      background: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .progress div {
+      height: 100%;
+      background: #4caf50;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+
+    .buttons button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .follow {
+      background: #007bff;
+      color: white;
+    }
+
+    .message {
+      background: #28a745;
+      color: white;
+    }
+
+    .buttons button:hover {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/100" alt="Profile">
+    <h2>Yash Uke</h2>
+    <p>Passionate CSE student who loves coding and building projects.</p>
+
+    <div class="skills">
+      <div class="skill">
+        <div class="skill-name">HTML</div>
+        <div class="progress"><div style="width: 90%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">CSS</div>
+        <div class="progress"><div style="width: 80%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">JavaScript</div>
+        <div class="progress"><div style="width: 70%"></div></div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button class="follow">Follow</button>
+      <button class="message">Message</button>
+    </div>
+  </div>
+
+</body>
+</html>

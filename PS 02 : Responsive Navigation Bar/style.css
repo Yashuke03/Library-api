@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 15px 20px;
+  color: white;
+  position: relative;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 6px 10px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: #555;
+  border-radius: 4px;
+}
+
+/* Active link */
+.nav-links a.active {
+  background: #007bff;
+  border-radius: 4px;
+}
+
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #333;
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  /* FIXED: Use ~ instead of + */
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+}

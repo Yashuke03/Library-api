@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<flights xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="flights.xsd">
+
+  <flight>
+    <flightNumber>AI101</flightNumber>
+    <airline>Air India</airline>
+    <source>Mumbai</source>
+    <destination>Delhi</destination>
+    <departureTime>10:30</departureTime>
+    <arrivalTime>12:45</arrivalTime>
+    <seats>150</seats>
+    <status>On-Time</status>
+  </flight>
+
+  <flight>
+    <flightNumber>6E202</flightNumber>
+    <airline>IndiGo</airline>
+    <source>Pune</source>
+    <destination>Bangalore</destination>
+    <departureTime>14:00</departureTime>
+    <arrivalTime>15:30</arrivalTime>
+    <seats>180</seats>
+    <status>Delayed</status>
+  </flight>
+
+  <flight>
+    <flightNumber>SG303</flightNumber>
+    <airline>SpiceJet</airline>
+    <source>Chennai</source>
+    <destination>Hyderabad</destination>
+    <departureTime>08:15</departureTime>
+    <arrivalTime>09:30</arrivalTime>
+    <seats>120</seats>
+    <status>Cancelled</status>
+  </flight>
+
+  <flight>
+    <flightNumber>UK404</flightNumber>
+    <airline>Vistara</airline>
+    <source>Kolkata</source>
+    <destination>Mumbai</destination>
+    <departureTime>18:45</departureTime>
+    <arrivalTime>21:00</arrivalTime>
+    <seats>160</seats>
+    <status>On-Time</status>
+  </flight>
+
+</flights>

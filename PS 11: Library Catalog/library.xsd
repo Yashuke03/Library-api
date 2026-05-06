@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="library">
+    <xsd:complexType>
+      <xsd:sequence>
+
+        <xsd:element name="book" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+
+              <xsd:element name="bookId" type="xsd:integer"/>
+
+              <xsd:element name="title" type="xsd:string"/>
+
+              <xsd:element name="author" type="xsd:string"/>
+
+              <xsd:element name="genre" type="xsd:string"/>
+
+              <!-- Year must be 4 digits -->
+              <xsd:element name="publishedYear">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                    <xsd:pattern value="\d{4}"/>
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+
+              <!-- Price must be decimal -->
+              <xsd:element name="price" type="xsd:decimal"/>
+
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

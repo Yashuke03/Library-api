@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="patients">
+    <xsd:complexType>
+      <xsd:sequence>
+
+        <xsd:element name="patient" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+
+              <xsd:element name="patientId" type="xsd:integer"/>
+
+              <xsd:element name="name" type="xsd:string"/>
+
+              <!-- Age constraint (1–120) -->
+              <xsd:element name="age">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:integer">
+                    <xsd:minInclusive value="1"/>
+                    <xsd:maxInclusive value="120"/>
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+
+              <!-- Blood group enumeration -->
+              <xsd:element name="bloodGroup">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="A+"/>
+                    <xsd:enumeration value="A-"/>
+                    <xsd:enumeration value="B+"/>
+                    <xsd:enumeration value="B-"/>
+                    <xsd:enumeration value="O+"/>
+                    <xsd:enumeration value="O-"/>
+                    <xsd:enumeration value="AB+"/>
+                    <xsd:enumeration value="AB-"/>
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+
+              <!-- Date format -->
+              <xsd:element name="admissionDate" type="xsd:date"/>
+
+              <xsd:element name="doctorAssigned" type="xsd:string"/>
+
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>
